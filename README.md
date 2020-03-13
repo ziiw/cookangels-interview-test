@@ -1,10 +1,15 @@
 ## Welcome to my test repository
 
 I applied to the Snr. Front-end position @CookAngels and was assigned this test. I made this repo in order to give you access to my source code.
+The project is deployed and available online: [https://cookangels-test.now.sh](https://cookangels-test.now.sh)
 
 ### Styling
 
-For this assignement I used the `JSX styling` method for simplicity. In bigger projects I rather prefer to use a styling file per component or page, using SASS or Stylus. When needed I also use CSS Modules, but I try to keep my CSS naming clean so I don't create naming collisions.
+It's bare minimum UI and styling. For this assignement I used the `JSX styling` method for simplicity. In bigger projects I rather prefer to use a styling file per component or page, using SASS or Stylus. When needed I also use CSS Modules, but I try to keep my CSS naming clean so I don't create naming collisions.
+
+### Issue
+
+- The UI do not update when changing the rating on the pages: `/list` and `/movie/${id}`. I did not take time to fix this issue.
 
 ### Next.JS
 
