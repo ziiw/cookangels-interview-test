@@ -9,6 +9,13 @@ class MyApp extends App {
     return (
       <Provider store={reduxStore}>
         <Component {...pageProps} />
+        <style jsx global>{`
+          body {
+            font-family: Arial, sans-serif;
+            max-width: 1140px;
+            margin: auto;
+          }
+        `}</style>
       </Provider>
     )
   }

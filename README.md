@@ -1,8 +1,17 @@
-# Redux Thunk example
+## Welcome to my test repository
 
-This example shows how to integrate Redux and Redux Thunk in Next.js.
+I applied to the Snr. Front-end position @CookAngels and was assigned this test. I made this repo in order to give you access to my source code.
 
-Usually splitting your app state into `pages` feels natural but sometimes you'll want to have global state for your app. This is an example on how you can use redux that also works with Next.js's universal rendering approach.
+### Styling
+
+For this assignement I used the `JSX styling` method for simplicity. In bigger projects I rather prefer to use a styling file per component or page, using SASS or Stylus. When needed I also use CSS Modules, but I try to keep my CSS naming clean so I don't create naming collisions.
+
+### Next.JS
+
+I was assigned to make a React / Redux mini-app, so I chose to work with the `create-next-app` boilerplate. I am use to this environement and I find it easy and fast to use for quick projects like this assignement.
+
+Below you will find the original `README.md` of the boilerplate.
+
 
 ## Deploy your own
 
@@ -42,18 +51,3 @@ yarn dev
 ```
 
 Deploy it to the cloud with [ZEIT Now](https://zeit.co/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-
-## Notes
-
-In the first example we are going to display a digital clock that updates every second. The first render is happening in the server and then the browser will take over. To illustrate this, the server rendered clock will have a different background color (black) than the client one (grey).
-
-The Redux `Provider` is implemented in `pages/_app.js`. Since the `MyApp` component is wrapped in `withReduxStore` the redux store will be automatically initialized and provided to `MyApp`, which in turn passes it off to `react-redux`'s `Provider` component.
-
-`index.js` have access to the redux store using `connect` from `react-redux`.
-`counter.js` and `examples.js` have access to the redux store using `useSelector` and `useDispatch` from `react-redux@^7.1.0`
-
-On the server side every request initializes a new store, because otherwise different user data can be mixed up. On the client side the same store is used, even between page changes.
-
-The example under `components/counter.js`, shows a simple incremental counter implementing a common Redux pattern. Again, the first render is happening in the server and instead of starting the count at 0, it will dispatch an action in redux that starts the count at 1. This continues to highlight how each navigation triggers a server render first and then a client render when switching pages on the client side
-
-For simplicity and readability, Reducers, Actions, and Store creators are all in the same file: `store.js`
